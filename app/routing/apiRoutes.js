@@ -18,10 +18,8 @@ module.exports = function(app) {
         for(let i=0; i<userN.scores.length; i++){
            let eachScoreDiff = Math.abs(Number(req.body.scores[i]) - Number(userN.scores[i])); 
            CurrentScoreDiff += eachScoreDiff;
-           console.log(eachScoreDiff,CurrentScoreDiff);
 
         }
-        console.log(CurrentScoreDiff,leastScoreDiff,CurrentScoreDiff < leastScoreDiff);
         if (CurrentScoreDiff < leastScoreDiff){
             leastUserName = userN.name;
             leastUserPhoto = userN.photo;
